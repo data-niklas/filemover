@@ -103,6 +103,7 @@ map<fs::path, vector<Rule>> read_config()
 void move_to_dir(fs::path path, fs::path dir)
 {
 	dir /= path.filename();
+	if (fs::exists(dir))return;
 	try{
 		fs::rename(path, dir);
 	}
