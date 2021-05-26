@@ -107,7 +107,7 @@ void move_to_dir(fs::path path, fs::path dir)
 	try{
 		fs::rename(path, dir);
 	}
-	catch(fs::filesystem_error){
+	catch(fs::filesystem_error& e){
 		fs::copy(path, dir);
 		fs::remove(path);
 	}
