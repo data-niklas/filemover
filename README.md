@@ -34,3 +34,15 @@ Of course specifying several folders works too!
 
 ## Found an error?
 This programm has almost no error handling and will not improve. It will probably work if you use the specified formats above and if the specified dirs exist.<br>
+
+
+## Installation
+```
+git clone https://github.com/data-niklas/filemover.git
+cd filemover
+make
+```
+
+## Usage
+Run `./filemover` once to check all rules once<br>
+Run `./filemover --watch` to watch the specified dirs and run on new files

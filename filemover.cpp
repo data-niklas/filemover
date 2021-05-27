@@ -180,7 +180,7 @@ void run_rules(map<fs::path, vector<Rule>> dirs){
 int main(int argc, char *argv[])
 {
 	map<fs::path, vector<Rule>> rules = read_config();
-
+	
 	if (argc > 1 && string(argv[1]) == "--watch")listen_rules(rules);
 	else run_rules(rules);
 }
